@@ -1,5 +1,6 @@
 from discord.ext import commands
 import discord
+import os
 import random
 import asyncio
 from discord.voice_client import VoiceClient
@@ -88,5 +89,5 @@ async def choice(ctx, *args):
 
     await ctx.send('Hey! {}'.format(member_names[0]))
 
-
-bot.run("")
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
